@@ -1,0 +1,31 @@
+creare un'applicazione CRUD (Create, Read, Update, Delete) utilizzando un'API RESTful con
+Spring Framework.
+1. Configurazione del progetto:
+o Crea un nuovo progetto Spring Initializr https://start.spring.io/
+o Assicurati di avere le dipendenze corrette nel file pom.xml per supportare Spring
+Web, Spring Boot,Spring Data(JPA) e un database di tua scelta.
+2. Definizione del modello entity:
+o Crea una classe Book per rappresentare un libro con i seguenti attributi: id, title,
+author, isbn.
+3. Creazione del repository:
+o Crea un'interfaccia BookRepository che estende JpaRepository<Book, Long> per
+gestire le operazioni di persistenza del libro.
+4. Creazione del repository:
+o Crea una classe BookRepository con annotazione @RestController.
+o Inietta il repository BookRepository all'interno del service.
+o Definisci i metodi per le operazioni CRUD: getAllBooks(), getBookById(id),
+createBook(book), updateBook(id, updatedBook), deleteBook(id).
+o Gestisci in modo ottimale le query con gli opzional
+5. Creazione del controller:
+o Crea una classe BookController con annotazione @RestController.
+o Implementa i metodi del controller utilizzando le annotazioni appropriate come
+@GetMapping, @PostMapping, @PutMapping e @DeleteMapping.
+o Utilizza i metodi del service per interagire con il database.
+6. Configurazione del database:
+o Configura la connessione al tuo database nel file application.properties (o
+application.yml) con le informazioni di connessione corrette.
+7. Test dell'applicazione:
+o Avvia l'applicazione e utilizza un client REST come Postman per testare le diverse
+operazioni CRUD.
+o Esegui richieste GET, POST, PUT e DELETE per ottenere tutti i libri, creare un
+nuovo libro, aggiornare un libro esistente e cancellare un libro
